@@ -8,11 +8,9 @@ const MunroView = function (munro, parent) {
 
 MunroView.prototype.renderView = function () {
   const name = new CreateAppend ('h2', this.munro.name, this.parent);
-  const munroDetails = new CreateAppend('ul', "", this.parent);
-  const meaning = new CreateAppend ('li', this.munro.meaning, munroDetails);
-  const height = new CreateAppend ('li', this.munro.height, munroDetails);
-  const region = new CreateAppend ('li', this.munro.region, munroDetails);
-
+  const munroDetails = new CreateAppend('ul', "Details", this.parent);
+  const meaning = new CreateAppend ('li', `Meaning: ${this.munro.meaning}`, munroDetails);
+  const height = new CreateAppend ('li', `Height: ${this.munro.height}`, munroDetails);
 };
 
 module.exports = MunroView;

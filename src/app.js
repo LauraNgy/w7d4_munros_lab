@@ -4,7 +4,6 @@ const Append = require('./helpers/append');
 const SelectView = require('./views/select_view');
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('JavaScript Loaded');
   const select = document.querySelector('.select-region');
   const selectView = new SelectView(select);
   selectView.bindEvents();
